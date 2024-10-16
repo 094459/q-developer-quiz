@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Quiz Results: {{ quiz.title }}</h1>
+<h2>Your Score: {{ score }} / {{ total_questions }}</h2>
+<p>Percentage: {{ (score / total_questions * 100) | round(2) }}%</p>
+<a href="{{ url_for('index') }}" class="btn btn-primary">Back to Home</a>
+{% endblock %}
